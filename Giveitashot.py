@@ -1,5 +1,5 @@
 #Michael Suter
-# Assignment 9 - checking to see if a string is the same reversable
+# Assignment 9 & 10 - checking to see if a string is the same reversable
 #3/31/20
 
 print("Type your word to see if it is a palindrome")
