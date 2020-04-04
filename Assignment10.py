@@ -3,11 +3,6 @@
 # 3/31/20
 
 
-print("Type your word to see if it is a palindrome")
-punc_string = input(">")
-punctuations = ''' !/?@#$;,()-[]{}<>./%^:'"&*_~ '''
-
-
 def punctuation_check(punc_string):
     string = ''
     if not punc_string.isalpha():
@@ -26,8 +21,15 @@ def palindrome_check(string):
     elif string[0] != string[-1]:  # if first [0] and last letter [`]are not the same then its not a palindrome
         return print("This is not a palindrome,", False)
     else:
-        return palindrome_check(string[1:-1]), string
+        return palindrome_check(string[1:-1]))
 
-
-punctuation_check(punc_string)
-palindrome_check(string)
+# You need to get the input from the user in a loop so it can happen multiple times    
+print("Type your word to see if it is a palindrome")
+punc_string = input(">")
+punctuations = ''' !/?@#$;,()-[]{}<>./%^:'"&*_~ '''
+ 
+    
+# Your punctuation check returns a value
+value = punctuation_check(punc_string)
+result = palindrome_check(value)
+print(result)
