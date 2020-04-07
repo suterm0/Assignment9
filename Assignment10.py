@@ -9,9 +9,10 @@ def punctuation_check(punc_string):
         for char in punc_string:
             if char.isalpha():
                 string += char
-    print(string)
-    return string
-
+        print(string)
+        return string
+    #The method was returning nothing in the string was already alpha, so fixed that
+    return punc_string
 
 def palindrome_check(string):
     string = string.lower()
