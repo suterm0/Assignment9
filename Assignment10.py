@@ -3,6 +3,18 @@
 # 3/31/20
 
 
+def choice():
+    answer = int(input("1 to check for a palindrome, 2 to exit!>"))
+    while answer != 1 and 2:
+        choice()
+    if answer == 1:
+        punc_string = input("enter your string>")
+        return punc_string
+    else:
+        if answer == 2:
+            exit()
+
+
 def punctuation_check(punc_string):
     string = ''
     if not punc_string.isalpha():
@@ -12,7 +24,8 @@ def punctuation_check(punc_string):
         print(string)
         return string
     else:
-        return punc_string
+        string = punc_string
+        return string
 
 
 def palindrome_check(string):
@@ -29,11 +42,11 @@ def palindrome_check(string):
 # You need to get the input from the user in a loop so it can happen multiple times
 
 print("Type your word to see if it is a palindrome")
-punc_string = input(">")
 punctuations = ''' !/?@#$;,()-[]{}<>./%^:'"&*_~ '''
  
     
 # Your punctuation check returns a value
-value = punctuation_check(punc_string)
+i = choice()
+value = punctuation_check(i)
 result = palindrome_check(value)
 print(result)
